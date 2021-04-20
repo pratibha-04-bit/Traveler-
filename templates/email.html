@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <!-- <h1>{{content}}</h1> -->
+    
+    <form action="sendemail" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                    to
+                </td>
+                <td>
+                    <input type='email' name="toemail" value={{traveler.email}}>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit">send</button></td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

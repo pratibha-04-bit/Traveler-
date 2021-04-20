@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>travle_form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+  <!-- <link rel="stylesheet" href="{% static 'dist/css/bootstrap.min.css' %}"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body{
+        background-color: rgb(3, 119, 139);
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand" href="#" style="color:rgb(153, 202, 159)"><b>TRAVELERA</b></a>
+    </nav>
+    <div class = "container" style="margin-top: 40px;">
+        <form method="POST", action="edit">
+            {% csrf_token %}
+            
+            
+   
+            <input type="hidden" name="{{traveler.id}}" >
+            
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="" class="label control-label">Place</label>
+                    <input type="text" class="form-control" id="place" name="place" value={{traveler.place}} >
+                     
+                  </div>
+                <div class="col-md-4">
+                  <label for="" class="label control-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" value={{traveler.username}} placeholder="name">
+                   
+                </div>
+                <div class="col-md-4">
+                    <label for="" class="label control-label">Phone </label>
+                    <input type="text" class="form-control" id="phone" name="phone" value={{traveler.phone}} placeholder="phone no.">
+                     
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                      <label for="" class="label control-label">Email</label>
+                      <input type="text" class="form-control" id="email" name="email" value={{traveler.email}} placeholder="email">
+                       
+                    </div>
+                    <div class="col-md-6">
+                      <label for="" class="label control-label">Address </label>
+                      <input type="text" class="form-control" id="address" name="address" value={{traveler.address}} placeholder="address">
+                       
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="" class="label control-label">Booking Date</label>
+                      <input type="date" class="form-control" id="from_date" value={{traveler.from_date}} name="from_date" >
+                       
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="label control-label">No. of people</label>
+                        <input type="number" class="form-control" id="no_people" name="no_people" value={{traveler.no_people}} placeholder="eg.03">
+                         
+                      </div>
+                   
+                  </div>
+                  <div class="row">
+                    
+                    
+          
+                    
+                  </div>
+        <br>
+        <br>
+      
+    <a href="/traveler_details" style="color: #0a0a0a;"><-go back</a>
+        
+        </form>
+    </div>
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+   
+</body>
+</html>

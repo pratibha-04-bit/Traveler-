@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background-color: black; */
+}
+ nav{
+     background-color: rgb(11, 82, 4)!important;
+ }
+ nav .logo{
+     background-color: #fff;
+     border-radius: 55%;
+ }
+ 
+.container{
+    padding-top: 50px;
+    /* color: #fff; */
+}

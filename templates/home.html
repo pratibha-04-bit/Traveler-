@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HOME</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="{% static 'dist/css/bootstrap.min.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
+ 
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+    li{
+      list-style: none;
+    }
+    p{
+      font-size: 0.9rem;
+      line-height: 1.6;
+      font-weight: 400;
+      color: rgb(111, 240, 6);
+    }
+    .header{
+      width:100%;
+      height: 100vh;
+      background-image:linear-gradient( rgba(20, 20, 19, 0.438) 33%, rgb(24, 26, 23) 100%), url('{% static "images/header-bg.jpg" %}');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      position: relative;
+      
+
+    }
+    .header:before{
+      content: "";
+      position: absolute;
+      top: 0%;
+      bottom: 0%;
+      left: 0;
+      right: 0;
+      opacity: .4;
+      z-index:-1;
+      background: linear-gradient(to right,#bdd107 0%, #0e1d05 0%,#040802 100% );
+    }
+    .nav-item a{
+      color: #fff!important ;
+
+    }
+    .header-section{
+      width:100%;
+      height: inherit;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .center-div{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+    }
+    .header-buttons a{
+      border: 1px solid #fff;
+      border-radius: 100px;
+      margin: 0 5px;
+      padding: 12px 35px;
+      outline: none;
+      color: white;
+      font-size:1rem;
+      font-weight: 400;
+      line-height:1.4 ;
+      text-align: center;
+    }
+    .header-buttons a:hover{
+      color:#027e08;
+      background-color: rgb(14, 20, 7);
+      text-decoration: none;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.3) ;
+    }
+
+    .center-div p{
+      font-size: 1.3rem;
+      padding: 10px 0 20px 0;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+	<div class="header" id="topheader">
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container text-uppercase p-2">
+          <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"  ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand font-weight-bold text-white" href="#">Travelera</a>
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">about us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">services</a>
+                    </li>
+                  
+                </ul>
+          
+          </div>
+      </div>
+    </nav>
+
+    <section class="header-section">
+      <div class="center-div">
+        <h1 class="font-weight-bold">
+          Lets explore the nature gift
+        </h1>
+        <p>Lets start journey to the natures beautiful place</p>
+        <div class="header-buttons">
+          <a href="">Login</a>
+          <a href="">Register</a>
+        </div>
+        
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ***************header end******************** -->
+
+  <!-- *****************service section************ -->
+
+  <section class="header-service">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 c-l-12">
+          <a href="#"><i></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- *****************service section end************ -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+  <script src="{% static 'dist/js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>
